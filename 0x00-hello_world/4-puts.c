@@ -1,8 +1,8 @@
 #include<stdio.h>
-/*
- * main use out to print 
- * Return 0
+/**
+ * main - use_out_to_print
  *
+ * Return: (0)
  */
 int main(void)
 {
