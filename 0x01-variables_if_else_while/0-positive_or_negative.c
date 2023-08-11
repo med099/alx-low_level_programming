@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /*
- *  * main : if-statement
- *   *
- *    * Return (0)
- *     */
+ * main - if statement
+ *
+ *Return: (0)
+ */
 int main(void)
 {
 	int n;
@@ -19,7 +19,7 @@ int main(void)
 		printf("%d is zero\n",n);
 		}
 		else {
-			printf("%d is negative",n);
+			printf("%d is negative\n",n);
 		}
 	}
 	return (0);
