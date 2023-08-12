@@ -13,7 +13,7 @@ char c;
 c = 'a';
 while (c <= 'z')
 {
-if (c == 'q')
+if (c == 'q' || c == 'e')
 {
 c++;
 continue;
