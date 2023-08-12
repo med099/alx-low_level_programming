@@ -6,7 +6,7 @@
  *
  * Function give type of number N P Z
  *
- * Retuen: (0)
+ * Return: (0)
  */
 int main(void)
 {
