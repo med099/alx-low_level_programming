@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /*
- * main - if statement
+ * main - Entry point
  *
  * Retuen: (0)
  */
