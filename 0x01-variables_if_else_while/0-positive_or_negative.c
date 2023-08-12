@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/*
- * main - if statement
+/**
+ * main - if statement 
  *
- * Return: (0)
+ * Return (0)
  */
 int main(void)
 {
