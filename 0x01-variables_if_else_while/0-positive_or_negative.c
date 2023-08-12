@@ -4,6 +4,8 @@
 /*
  * main - Entry point
  *
+ * Function give type of number N P Z
+ *
  * Retuen: (0)
  */
 int main(void)
