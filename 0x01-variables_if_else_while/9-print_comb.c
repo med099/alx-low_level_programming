@@ -9,9 +9,9 @@
  */
 int main(void)
 {
-char c;
-c = '0';
-while (c <= '9')
+int c;
+c = 48;
+while (c <= 57)
 {
 write(1, &c, 1);
 write(1, ",", 1);
