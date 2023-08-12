@@ -14,6 +14,10 @@ c = 48;
 while (c <= 57)
 {
 write(1, &c, 1);
+if (c == 57)
+{
+break;
+}
 write(1, ",", 1);
 write(1, " ", 1);
 c++;
