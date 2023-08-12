@@ -14,10 +14,10 @@ c = 'a';
 n = '0';
 while (n <= '9')
 {
-write(1, &c, 1);
+write(1, &n, 1);
 n++;
 }
-while (c <= 'z')
+while (c <= 'f')
 {
 write(1, &c, 1);
 c++;
