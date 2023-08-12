@@ -5,8 +5,7 @@
 /**
  * main - Entry point
  *
- * Description: Function to give type number
- * positive, negative, zero.
+ * Description:detect the last digit.
  *
  * Return: Always 0 (Success)
  */
