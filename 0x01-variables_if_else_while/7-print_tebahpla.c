@@ -10,11 +10,9 @@
 int main(void)
 {
 char c;
-c = 'z';
-while (c <= 'a')
+for (ch = 'z'; ch >= 'a'; ch--)
 {
 write(1, &c, 1);
-c--;
 }
 write(1, "\n", 1);
 
