@@ -5,15 +5,15 @@
  *
  * Return: Always 0.
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 char a;
 a = 'a';
 while(a <= 'z')
 	{
-	write(1,&a,1);
+	write(1, &a, 1);
 	a++;
 	}
-write(1,"\n",1);
+write(1, "\n", 1);
 return (0);
 }
