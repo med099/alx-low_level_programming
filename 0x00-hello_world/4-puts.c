@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * main - use_out_to_print
+ * main - use_puts_to_print
  *
  * Return: (0)
  */
