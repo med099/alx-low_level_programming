@@ -11,30 +11,30 @@
  */
 int main(void)
 {
-	int n, m, l, o;
+	int		n1;
+	int		n2;
 
-	for (n = '0'; n <= '9'; n++)
+	n1 = 0;
+	while (n1 <= 99)
 	{
-		for (m = '0'; m <= '8'; m++)
+		n2 = n1 + 1;
+		while (n2 <= 99)
 		{
-			l = n;
-			for (l = l; l <= '9'; l++)
-			{
-				for (o = m + 1; o <= '9'; o++)
 				{
-					putchar(n);
-					putchar(m);
+					putchar('0' + n1 / 10);
+					putchar('0' + n1 % 10);
 					putchar(' ');
-					putchar(l);
-					putchar(o);
-					if (n != '9' || m != '8')
+					putchar('0' + n2 / 10);
+					putchar('0' + n2 % 10);
+					if (n1 != 98)
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-			}
+			n2++;
 		}
+		n1++;
 	}
 
 	putchar('\n');
