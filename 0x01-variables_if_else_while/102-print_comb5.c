@@ -20,18 +20,16 @@ int main(void)
 		n2 = n1 + 1;
 		while (n2 <= 99)
 		{
-				{
-					putchar('0' + n1 / 10);
-					putchar('0' + n1 % 10);
-					putchar(' ');
-					putchar('0' + n2 / 10);
-					putchar('0' + n2 % 10);
-					if (n1 != 98)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+			putchar('0' + n1 / 10);
+			putchar('0' + n1 % 10);
+			putchar(' ');
+			putchar('0' + n2 / 10);
+			putchar('0' + n2 % 10);
+			if (n1 != 98)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 			n2++;
 		}
 		n1++;
@@ -40,4 +38,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
