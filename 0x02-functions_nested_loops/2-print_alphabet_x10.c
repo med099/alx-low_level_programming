@@ -1,11 +1,11 @@
 #include "unistd.h"
 
 /**
- * print_alphabet - print alphabet * 10.
+ * print_alphabet_x10 - print alphabet * 10.
  *
  * Return: void.
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	char a;
 	int i;
