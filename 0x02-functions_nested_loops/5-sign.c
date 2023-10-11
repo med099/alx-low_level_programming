@@ -1,4 +1,3 @@
-#include <main.h>
 /**
  * print_sign - check lower case character
  *@n: character to check it
