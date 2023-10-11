@@ -13,8 +13,8 @@ int main(void)
 	n = 1;
 	fib = 2;
 	fifty = 48;
-
-	while(fifty > 0)
+	printf("1, ");
+	while (fifty > 0)
 	{
 		printf("%ld, ", fib);
 		fib += n;
