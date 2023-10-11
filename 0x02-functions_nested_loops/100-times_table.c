@@ -9,6 +9,7 @@ void _print(int res)
 {
 	_putchar(' ');
 	_putchar(' ');
+	_putchar(' ');
 	_putchar(res + 48);
 }
 
@@ -19,6 +20,7 @@ void _print(int res)
  */
 void __print(int res)
 {
+	_putchar(' ');
 	_putchar(' ');
 	_putchar(res / 10 + 48);
 	_putchar(res % 10 + 48);
@@ -31,6 +33,7 @@ void __print(int res)
  */
 void ___print(int res)
 {
+	_putchar(' ');
 	_putchar(res / 100 + 48);
 	_putchar((res / 10) % 10 + 48);
 	_putchar(res % 10 + 48);
