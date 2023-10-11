@@ -25,18 +25,23 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(res + 48);
-				_putchar(',');
+				if (timen != 9)
+					_putchar(',');
+				else
+					_putchar('\n');
 			}
 			else
 			{
 				_putchar(' ');
 				_putchar(res / 10 + 48);
 				_putchar(res % 10 + 48);
-				_putchar(',');
+				if (timen != 9)
+					_putchar(',');
+				else
+					_putchar('\n');
 			}
 			timen++;
 		}
 		n++;
-		_putchar('\n');
 	}
 }
