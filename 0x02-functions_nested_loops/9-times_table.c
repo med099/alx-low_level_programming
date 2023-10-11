@@ -15,7 +15,7 @@ void times_table(void)
 	while (n < 10)
 	{
 		timen = 0;
-		putchar(' ');
+		_putchar(' ');
 		while (timen < 10)
 		{
 			res = n * timen;
