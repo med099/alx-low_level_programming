@@ -55,10 +55,10 @@ void print_times_table(int n)
 	{
 		while (nton <= n)
 		{
-			timen = 0;
+			timen = 1;
 			_putchar('0');
 			_putchar(',');
-			while (timen++ < n)
+			while (timen <= n)
 			{
 				res = nton * timen;
 				if (res < 10)
@@ -71,10 +71,11 @@ void print_times_table(int n)
 					_putchar(',');
 				else
 					_putchar('\n');
+				timen++;
 			}
 			nton++;
 		}
 	}
 	else
-		_putchar('\n');
+		_putchar('\0');
 }
