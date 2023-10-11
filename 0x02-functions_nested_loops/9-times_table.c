@@ -14,8 +14,9 @@ void times_table(void)
 	n = 0;
 	while (n < 10)
 	{
-		timen = 0;
-		_putchar(' ');
+		timen = 1;
+		_putchar('0');
+		_putchar(',');
 		while (timen < 10)
 		{
 			res = n * timen;
@@ -24,12 +25,14 @@ void times_table(void)
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(res + 48);
+				_putchar(',');
 			}
 			else
 			{
 				_putchar(' ');
 				_putchar(res / 10 + 48);
 				_putchar(res % 10 + 48);
+				_putchar(',');
 			}
 			timen++;
 		}
