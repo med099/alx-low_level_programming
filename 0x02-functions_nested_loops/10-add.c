@@ -5,4 +5,6 @@
  * Return: result of adding
  */
 int add(int a, int b)
+{
 	return (a + b);
+}
