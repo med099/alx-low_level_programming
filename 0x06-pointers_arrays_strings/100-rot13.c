@@ -8,16 +8,20 @@ char *rot13(char *str)
 {
 	int i, j;
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	char s[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char sro[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
 	i = 0;
 	while (str[i])
 	{
 		j = 0;
-		while (s[j])
+		while (sro[j])
 		{
-			if (str[i] == s[j])
+			if (str[i] == sro[j])
+			{
 				str[i] = rot[j];
+				i++;
+				j = 0;
+			}
 			j++;
 		}
 		i++;
