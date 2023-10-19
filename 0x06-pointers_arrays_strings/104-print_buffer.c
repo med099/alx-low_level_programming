@@ -1,5 +1,16 @@
 #include <stdio.h>
 /**
+ * is_printable - check character if he is printble
+ * @c: charcter
+ * Return: 0 or 1
+*/
+int	is_printable(char c)
+{
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
+}
+/**
  * print_buffer - Print the contents of a character buffer in a formatted way.
  * @b: The input buffer to print.
  * @size: The size of the buffer.
@@ -24,7 +35,7 @@ void print_buffer(char *b, int size)
 
 		for (j = 0; j < 10; j++)
 		{
-			if (i + j < size && isprint(b[i + j]))
+			if (i + j < size && is_printable(b[i + j]))
 				printf("%c", b[i + j]);
 			else
 				printf(".");
