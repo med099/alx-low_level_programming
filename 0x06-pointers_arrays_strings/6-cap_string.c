@@ -1,20 +1,4 @@
 /**
- * _strlowcase - function changes uppercase letters of a string to lowercase.
- * @str: pointer to string
-*/
-void _strlowcase(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] += 32;
-		i++;
-	}
-}
-/**
  * cap_string - function that capitalizes all words of a string.
  * @str: pointer to string
  * Return: pointer to string
@@ -22,25 +6,24 @@ void _strlowcase(char *str)
 char *cap_string(char *str)
 {
 	int i;
-	int check;
+	int j;
+	char check[] = " \t\n,;.!?\"(){}";
 
-	_strlowcase(str);
-	check = 0;
 	i = 0;
+	if (str[i] >= 'a' && str[i] <= 'z')
+	{
+		str[i] -= 32;
+		i++;
+	}
 	while (str[i])
 	{
-		if (str[i] >= 'a' && str[i] <= 'z')
+		j = 0;
+		while (check[j])
 		{
-			if (check == 0)
-			{
+			if ((str[i] >= 'a' && str[i] <= 'z') && str[i - 1] == check[j])
 				str[i] -= 32;
-				check = 1;
-			}
+			j++;
 		}
-		else if ((str[i] >= '0' && str[i] <= '9') || str[i] == '-')
-			check = 1;
-		else
-			check = 0;
 		i++;
 	}
 	return (str);
