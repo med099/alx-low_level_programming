@@ -37,10 +37,15 @@ void print_buffer(char *b, int size)
 
 		for (j = 0; j < 10; j++)
 		{
-			if (i + j < size && is_printable(b[i + j]))
-				printf("%c", b[i + j]);
+			if (i + j < size)
+			{
+				if (is_printable(b[i + j]))
+					printf("%c", b[i + j]);
+				else
+					printf(".");
+			}
 			else
-				printf(".");
+				printf(" ");
 		}
 		printf("\n");
 	}
