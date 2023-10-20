@@ -1,4 +1,19 @@
 /**
+ * len_n - calcul length of n1 and n2
+ * @num: pointer of num
+ * Return: length of num
+*/
+int len_n(char *num)
+{
+	int i;
+
+	i = 0;
+	while (num[i])
+		i++;
+	return (i - 1);
+}
+
+/**
  * infinite_add - function that adds two numbers
  * @n1: first string
  * @n2: secondstring
@@ -9,27 +24,39 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int i, j, n;
+	int i, j, k, l, m, n;
 
-	i = j = n = 0;
-	if ((n1[0] - 48) + (n2[0] - 48) >= 10)
+	i = len_n(n1);
+	j = len_n(n2);
+	if (i > size_r || j > size_r)
+		return (0);
+	m = 0;
+	k = 0;
+	while (k < size_r - 1)
 	{
-		r[0] = 1 + 48;
-		j = 1;
+		n = m;
+		if (i >= 0)
+			n += n1[i] - '0';
+		if (j >= 0)
+			n += n2[j] - '0';
+		if (i < 0 && j < 0 && n == 0)
+		{
+			break;
+		}
+		m = n / 10;
+		r[k] = n % 10 + '0';
+		i--;
+		j--;
+		k++;
 	}
-	while (i < size_r && (n1[i] != '\0' || n2[i] != '\0' || r[j] != '\0'))
+	r[k] = '\0';
+	if (i >= 0 || j >= 0 || m)
+		return (0);
+	for (k -= 1, l = 0; l < k; k--, l++)
 	{
-		if ((n1[i + 1] - 48) + (n2[i + 1] - 48) >= 10)
-			n = 1;
-		else
-			n = 0;
-		r[j] = (n1[i] - 48) + (n2[i] - 48) + n;
-		r[j] = r[j] % 10 + 48;
-		i++;
-		j++;
-		if (n1[i] == '\0' || n2[i] == '\0')
-			r[j] = '\0';
+		m = r[k];
+		r[k] = r[l];
+		r[l] = m;
 	}
-	r[j] = '\0';
 	return (r);
 }
