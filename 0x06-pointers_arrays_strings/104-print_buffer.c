@@ -19,14 +19,14 @@ void print_line(char *c, int s, int l)
 		else
 			printf("  ");
 		if (j % 2)
-			printf(' ');
+			printf(" ");
 	}
 	for (k = 0; k <= s; k++)
 	{
 		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
-			printf(c[l * 10 + k]);
+			printf("%c", c[l * 10 + k]);
 		else
-			printf('.');
+			printf(".");
 	}
 }
 
@@ -46,8 +46,9 @@ void print_buffer(char *b, int size)
 			print_line(b, 9, i);
 		else
 			print_line(b, size % 10 - 1, i);
-		printf('\n');
+		printf("\n");
 	}
 	if (size == 0)
-	printf('\n');
+	printf("\n");
 }
+
