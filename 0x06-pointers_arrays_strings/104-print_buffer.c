@@ -1,15 +1,35 @@
 #include <stdio.h>
+
 /**
- * is_printable - check character if he is printble
- * @c: charcter
- * Return: 0 or 1
-*/
-int	is_printable(char c)
+ * print_line - prints a s bytes of a buffer
+ * @c: buffer to print
+ * @s: bytes of buffer to print
+ * @l: line of buffer to print
+ * Return: void
+ */
+
+void print_line(char *c, int s, int l)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	int j, k;
+
+	for (j = 0; j <= 9; j++)
+	{
+		if (j <= s)
+			printf("%02x", c[l * 10 + j]);
+		else
+			printf("  ");
+		if (j % 2)
+			printf(' ');
+	}
+	for (k = 0; k <= s; k++)
+	{
+		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
+			printf(c[l * 10 + k]);
+		else
+			printf('.');
+	}
 }
+
 /**
  * print_buffer - Print the contents of a character buffer in a formatted way.
  * @b: The input buffer to print.
@@ -17,39 +37,17 @@ int	is_printable(char c)
  */
 void print_buffer(char *b, int size)
 {
-	int i, j;
+	int i;
 
-	if (size > 0)
+	for (i = 0; i <= (size - 1) / 10 && size; i++)
 	{
-	for (i = 0; i < size; i += 10)
-	{
-		printf("%08x: ", i);
-		for (j = 0; j < 10; j++)
-		{
-			if (i + j < size)
-				printf("%02x", (unsigned char)b[i + j]);
-			else
-				printf("  ");
-
-			if (j % 2 != 0)
-				printf(" ");
-		}
-
-		for (j = 0; j < 10; j++)
-		{
-			if (i + j < size)
-			{
-				if (is_printable(b[i + j]))
-					printf("%c", b[i + j]);
-				else
-					printf(".");
-			}
-			else
-				printf(" ");
-		}
-		printf("\n");
+		printf("%08x: ", i * 10);
+		if (i < size / 10)
+			print_line(b, 9, i);
+		else
+			print_line(b, size % 10 - 1, i);
+		printf('\n');
 	}
-	}
-	else
-		printf("\n");
+	if (size == 0)
+	printf('\n');
 }
