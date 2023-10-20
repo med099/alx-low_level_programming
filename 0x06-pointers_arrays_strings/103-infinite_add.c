@@ -10,7 +10,7 @@ int len_n(char *num)
 	i = 0;
 	while (num[i])
 		i++;
-	return (i - 1);
+	return (i);
 }
 
 /**
@@ -32,6 +32,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (0);
 	m = 0;
 	k = 0;
+	i--;
+	j--;
 	while (k < size_r - 1)
 	{
 		n = m;
