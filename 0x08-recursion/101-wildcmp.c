@@ -1,9 +1,11 @@
 /**
-  * is_prime_number - function 
-  * @n: number
-  * Return: returns n
+  * wildcm - vompare string 
+  * @s1: string 1
+  *	@s2: string 2
+  * Return: return 1 or 0
   */
-int is_prime_number(int n)
+
+int wildcmp(char *s1, char *s2)
 {
-	return (n);
+	return (1);
 }
