@@ -1,11 +1,19 @@
-#include "main.h"
+#include <stdio.h>
+#include "holberton.h"
 /**
  * _strlen_recursion - returns the length of a string.
  * @s: the string to count
  * Return: length of the string
  */
-int _strlen_recursion(char *s);
-
+int _strlen_recursion(char *s)
+{
+	if (*s)
+	{
+		s++;
+		return (1 + _strlen_recursion(s));
+	}
+	return (0);
+}
 /**
  * checker - helper function for is_palindrome
  * @str: the string
@@ -21,7 +29,6 @@ int checker(char *str, int len, int count)
 		return (checker(str, len - 1, count + 1));
 	return (0);
 }
-
 /**
  * is_palindrome - checks if the string is a palindrome
  * @s: the string to check
