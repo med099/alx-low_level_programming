@@ -6,13 +6,13 @@
  */
 int _atoi(char *num)
 {
-	int i, n;
+	int i, n, sign;
 
-	i = 0;
-	n = 0;
+	n =i = 0;
+	sign = 1;
 	if (num[i] == '-')
 	{
-		n = -1;
+		sign = -1;
 		i++;
 	}
 	while (num[i] >= '0' && num[i] <= '9')
@@ -21,7 +21,7 @@ int _atoi(char *num)
 		n += (num[i] - '0');
 		i++;
 	}
-	return (n);
+	return (sign * n);
 }
 
 /**
