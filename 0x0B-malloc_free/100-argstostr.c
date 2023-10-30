@@ -65,7 +65,7 @@ char *argstostr(int ac, char **av)
 	int i;
 	char *str;
 
-	i = 1;
+	i = 0;
 	while (i < ac)
 	{
 		str = str_concat(av[i], av[i + 1]);
