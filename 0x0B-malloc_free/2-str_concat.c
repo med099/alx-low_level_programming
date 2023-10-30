@@ -8,6 +8,7 @@ int _strlen(char *str)
 {
 	int i;
 
+	i = 0;
 	while (str[i])
 		i++;
 	return (i);
@@ -24,8 +25,10 @@ char *str_concat(char *s1, char *s2)
 	char *conc;
 	int len, i;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 	len = _strlen(s1);
 	len += _strlen(s2);
 	conc = malloc(sizeof(char) * len + 1);
@@ -33,13 +36,13 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	i = 0;
-	while (*s1 && s1 != NULL)
+	while (*s1)
 	{
 		conc[i] = *s1;
 		s1++;
 		i++;
 	}
-	while (*s2 && s2 != NULL)
+	while (*s2)
 	{
 		conc[i] = *s2;
 		s2++;
