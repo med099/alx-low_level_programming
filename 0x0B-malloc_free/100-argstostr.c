@@ -65,6 +65,10 @@ char *argstostr(int ac, char **av)
 	int i;
 	char *str;
 
+	if (ac == 0)
+		return (NULL);
+	if (av == NULL)
+		return (NULL);
 	i = 0;
 	while (i < ac)
 	{
