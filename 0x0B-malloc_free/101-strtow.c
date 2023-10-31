@@ -19,6 +19,27 @@ char *_strncpy(char *s1, char *s2, int n)
 }
 
 /**
+ * _strcmp - function that compares two strings
+ * @s1: first strinf
+ * @s2: second string
+ * Return: string
+ */
+int _strcmp(char *s1, char *s2)
+{
+	int i;
+
+	i = 0;
+	while (s1[i])
+	{
+		if (s1[i] == s2[i])
+			i++;
+		else
+			return (s1[i] - s2[i]);
+	}
+	return (0);
+}
+
+/**
  * strtow - function that splits a string into words
  * @str: string to split it
  * Return: a pointer to an array of strings (words) or NULL
@@ -32,7 +53,7 @@ char	**strtow(char *str)
 	char **out;
 
 	i = j = k = wc = 0;
-	if (str == NULL || str == "")
+	if (str == NULL || _strcmp("", str) == 0)
 		return (NULL);
 	while (str[i])
 	{
