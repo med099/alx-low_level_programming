@@ -18,7 +18,6 @@ char *_strncpy(char *s1, char *s2, int n)
 	return (s1);
 }
 
-
 /**
  * strtow - function that splits a string into words
  * @str: string to split it
@@ -33,6 +32,8 @@ char	**strtow(char *str)
 	char **out;
 
 	i = j = k = wc = 0;
+	if (str == NULL || str == "")
+		return (NULL);
 	while (str[i])
 	{
 		while (str[i] && str[i] == ' ')
