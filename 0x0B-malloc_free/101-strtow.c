@@ -53,7 +53,7 @@ char	**strtow(char *str)
 	char **out;
 
 	i = j = k = wc = 0;
-	if (str == NULL || _strcmp(" ", str) != 0)
+	if (str == NULL)
 		return (NULL);
 	while (str[i])
 	{
