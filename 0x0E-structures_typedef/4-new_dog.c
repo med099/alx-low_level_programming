@@ -33,15 +33,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int nlen, olen;
 	dog_t *new;
 
-	nlen = olen = 0;
-
 	new = malloc(sizeof(dog_t));
 	if (!new)
 		return (NULL);
 
+	nlen = 0;
 	while (name[nlen])
 		nlen++;
-	new->name = malloc(sizeof(char) * nlen + 1);
+	new->name = malloc(sizeof(char) * nlen);
 	if (!(new->name))
 	{
 		free(new);
@@ -49,9 +48,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	_strcpy(new->name, name);
 
+	olen = 0;
 	while (owner[olen])
 		olen++;
-	new->owner = malloc(sizeof(char) * olen + 1);
+	new->owner = malloc(sizeof(char) * olen);
 	if (!(new->owner))
 	{
 		free(new->name);
