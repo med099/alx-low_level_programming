@@ -40,7 +40,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	nlen = 0;
 	while (name[nlen])
 		nlen++;
-	new->name = malloc(sizeof(char) * nlen);
+	new->name = malloc(sizeof(char) * nlen + 1);
 	if (!(new->name))
 	{
 		free(new);
@@ -51,7 +51,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	olen = 0;
 	while (owner[olen])
 		olen++;
-	new->owner = malloc(sizeof(char) * olen);
+	new->owner = malloc(sizeof(char) * olen + 1);
 	if (!(new->owner))
 	{
 		free(new->name);
