@@ -69,8 +69,7 @@ void print_all(const char * const format, ...)
 			if (format[i] == *form[j].type)
 			{
 				form[j].f(args);
-				if (format[i + 1])
-					printf(", ");
+				printf(", ");
 			}
 			j++;
 		}
