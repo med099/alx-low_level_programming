@@ -50,11 +50,6 @@ void print_float(va_list f)
 */
 void print_all(const char * const format, ...)
 {
-/**
- * struct Form - type format
- * @type: type
- * @f: pointer to function
- */
 	_Form form[] = {
 		{"c", print_char},
 		{"i", print_int},
