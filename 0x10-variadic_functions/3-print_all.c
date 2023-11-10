@@ -58,8 +58,10 @@ void print_all(const char * const format, ...)
 	};
 	int i, j;
 	va_list args;
+	char *sep;
 
 	i = 0;
+	sep = "";
 	va_start(args, format);
 	while (format && format[i])
 	{
@@ -68,9 +70,9 @@ void print_all(const char * const format, ...)
 		{
 			if (format[i] == *form[j].type)
 			{
+				printf("%s", sep);
 				form[j].f(args);
-				if (format[i + 1])
-					printf(", ");
+				sep = ", ";
 			}
 			j++;
 		}
