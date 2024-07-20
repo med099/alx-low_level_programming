@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/moouali/Desktop/alx-low_level_programming/0x1E-search_algorithms",
+      "program": "/Users/moouali/Desktop/alx-low_level_programming/0x1E-search_algorithms/build/Debug/outDebug"
+    }
+  ]
+}
